@@ -1,15 +1,15 @@
-# CR Sample Project
+# PROJECT MANAGEMENT APPLICATION : Sample Project
 
 ## Technology Requirements:
-- [ ] Java 1.8
-- [ ] Spring Boot 
-- [ ] Git 
+- [X] Java 1.8
+- [X] Spring Boot 
+- [X] Git 
 - [ ] Kafka 
 - [ ] Angular 
 - [ ] Postgres Database
 
 ## Java and Spring Boot Exercise
-- [ ] Create a Java 1.8 application with Spring Boot
+- [X] Create a Java 1.8 application with Spring Boot
 - [ ] The application should receive a POST http request and return a job id
 - [ ] The application will save the request in a local Postgres database table and submit the job to a Kafka topic for later consumption
 - [ ] The application should be able to receive GET requests with a Job ID as a parameter and return the status of the job (new, in progress or done)
@@ -18,10 +18,10 @@
 - [ ] You can just put the application to sleep for a random intervals between 1 to 5 seconds to mimic some work and then update the job status to Done and continue processing other messages if they are any.
 
 ## Git Exercise
-- [ ] Create a new Git repository in Github or in Bitbucket and add the project above
-- [ ] Make the repository public
-- [ ] Create two branches: One called master and the other called develop
-- [ ] Add your code to both branches
+- [X] Create a new Git repository in Github or in Bitbucket and add the project above
+- [X] Make the repository public
+- [X] Create two branches: One called ~~master~~ (NOTE: I chose to go with "main" as "master" has poor connotations) and the other called develop
+- [X] Add your code to both branches
 - [ ] Create a new feature branch to do the code in the new section called feature/angular
 
 ## Angular Exercise
