@@ -6,7 +6,7 @@
 - [X] Git 
 - [ ] Kafka 
 - [ ] Angular 
-- [ ] Postgres Database
+- [X] Postgres Database
 
 ## Java and Spring Boot Exercise
 - [X] Create a Java 1.8 application with Spring Boot
