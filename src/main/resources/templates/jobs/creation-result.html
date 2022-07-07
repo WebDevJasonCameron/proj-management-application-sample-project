@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="partials/partials.html :: head ('Job Creation Result')"></head>
+<body>
+<!--NAV-->
+<nav th:replace="partials/partials.html :: navbar"></nav>
+
+<!--HEADER-->
+<section th:replace="partials/partials.html :: header ('Job Creation Result')"></section>
+
+
+<!--MAIN-->
+<span th:text="${id}"></span>
+
+
+
+
+<!--SCRIPTS-->
+<section th:replace="partials/partials.html :: script-section"></section>
+</body>
+</html>
