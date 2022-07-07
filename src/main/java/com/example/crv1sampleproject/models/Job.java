@@ -17,6 +17,8 @@ public class Job {
     private long id;
     @Column(name = "status")
     private String status;
+    @Column(name = "details")
+    private String details;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "job", orphanRemoval = true)
     @JsonManagedReference
@@ -36,6 +38,9 @@ public class Job {
     public List<Message> getMessages() {
         return messages;
     }
+    public String getDetails() {
+        return details;
+    }
 
     // SET
     public void setStatus(String status) {
@@ -43,6 +48,9 @@ public class Job {
     }
     public void setMessages(List<Message> messages) {
         this.messages = messages;
+    }
+    public void setDetails(String details) {
+        this.details = details;
     }
 
     // CHECK
