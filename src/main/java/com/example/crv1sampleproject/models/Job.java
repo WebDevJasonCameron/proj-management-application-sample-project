@@ -15,10 +15,12 @@ public class Job {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
-    @Column(name = "status")
-    private String status;
+    @Column(name = "title")
+    private String title;
     @Column(name = "details")
     private String details;
+    @Column(name = "status")
+    private String status;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "job", orphanRemoval = true)
     @JsonManagedReference
@@ -41,6 +43,9 @@ public class Job {
     public String getDetails() {
         return details;
     }
+    public String getTitle() {
+        return title;
+    }
 
     // SET
     public void setStatus(String status) {
@@ -52,15 +57,22 @@ public class Job {
     public void setDetails(String details) {
         this.details = details;
     }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     // CHECK
     @Override
     public String toString() {
         return "Job{" +
                 "id=" + id +
+                ", title='" + title + '\'' +
                 ", status='" + status + '\'' +
+                ", details='" + details + '\'' +
                 ", messages=" + messages +
                 '}';
     }
+
+
 
 }  //<--END
