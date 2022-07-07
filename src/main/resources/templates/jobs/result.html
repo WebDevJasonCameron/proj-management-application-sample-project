@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="partials/partials.html :: head ('Job Creation Result')"></head>
+<body>
+<!--NAV-->
+<nav th:replace="partials/partials.html :: navbar"></nav>
+
+<!--HEADER-->
+<section th:replace="partials/partials.html :: header ('Job Creation Result')"></section>
+
+
+<!--MAIN-->
+<div class="container w-75 mt-6">
+    <div class="card">
+        <div class="card-header">
+            <h2>
+                Following Job Added
+            </h2>
+        </div>
+            <div class="card-body">
+                <ul>
+                    <li class="list-group-item">
+                        <b>TITLE: </b><span th:text="${job.title}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>ID #: </b><span th:text="${job.id}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>STATUS: </b><span th:text="${job.status}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>DETAILS: </b><span th:text="${job.details}"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <form  th:action="@{/jobs/start}" th:method="post">
+                    <input type="hidden" name="id" th:value="${job.id}">
+                    <button class="btn btn-secondary w-100">Start Project</button>
+                </form>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!--SCRIPTS-->
+<section th:replace="partials/partials.html :: script-section"></section>
+</body>
+</html>
