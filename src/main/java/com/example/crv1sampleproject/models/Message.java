@@ -1,8 +1,11 @@
 package com.example.crv1sampleproject.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "messages")
@@ -15,6 +18,9 @@ public class Message {
     private long id;
     @Column(name = "comment", length = 2000)
     private String comment;
+    @Column(name = "time_stamp")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime timeStamp;
 
     @ManyToOne
     @JoinColumn(name = "job_id")
